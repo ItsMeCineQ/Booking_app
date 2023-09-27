@@ -1,0 +1,54 @@
+:root {
+  --color-blue: #4747eb;
+  --color-white: #e7e7e7;
+  --color-hover: #a1a1a1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 1.5rem;
+  display: flex;
+}
+
+header h1 {
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 2.75rem;
+}
+
+header .label--search input {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 15px;
+  width: 200px;
+  height: 30px;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+
+header .menu ul {
+  flex-direction: row;
+  gap: 2rem;
+  font-size: 1.5rem;
+  list-style: none;
+  display: flex;
+}
+
+header .menu ul li:hover {
+  color: var(--color-hover);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.c49be2b3.css.map */
