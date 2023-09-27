@@ -574,24 +574,31 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"aenu9":[function(require,module,exports) {
-const url = "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates?base_currency=USD&languagecode=en-us";
+const url = "https://booking-com.p.rapidapi.com/v1/hotels/map-markers?hotel_id=1676161&locale=en-gb";
 const options = {
     method: "GET",
     headers: {
         "X-RapidAPI-Key": "e795d9296dmsh357f445f2d99d5bp1228a7jsne6e0dd43b489",
-        "X-RapidAPI-Host": "apidojo-booking-v1.p.rapidapi.com"
+        "X-RapidAPI-Host": "booking-com.p.rapidapi.com"
     }
 };
-const getBookings = async function(url, options) {
+const map = document.querySelector(".hotel--map");
+const fetchAPI = async function() {
     try {
         const response = await fetch(url, options);
         const result = await response.text();
+        const html = `
+            <div class="hotel--map">${result.latitude}</div>
+        `;
+        map.insertAdjacentHTML("afterend", html);
         console.log(result);
     } catch (error) {
         console.error(error);
     }
 };
-getBookings();
+fetchAPI();
+const renderMap = function() {};
+renderMap();
 
 },{}]},["aD7Zm","aenu9"], "aenu9", "parcelRequire818f")
 
